@@ -67,7 +67,6 @@
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="lvsound2.dll" Type="Document" URL="/&lt;resource&gt;/lvsound2.dll"/>
-			<Item Name="matscript.dll" Type="Document"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

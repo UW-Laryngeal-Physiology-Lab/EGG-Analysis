@@ -1,6 +1,19 @@
-%% Read Audio
+%% Read Audio Data
+[file,path]=uigetfile('.wav');
+[S,Fs]=audioread(file);
+S=S(:,2);
 
+%% Set constants
+cutoff=0.35;
 
+%% FFT Test
+m = length(S);       % original sample length
+n = pow2(nextpow2(m));  % transform length
+y = fft(S,n); 
+f = (0:n-1)*(Fs/n)/10;
+power = abs(y).^2/n;      
+
+plot(f(1:floor(n/2)),power(1:floor(n/2)))
 %% Do Calculations
 %find subsamle size using largest frequency component
 Y = abs(fftshift(fft(S)));
